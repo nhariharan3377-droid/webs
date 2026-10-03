@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Hariharan - B.Tech IT Undergraduate and Full Stack Developer">
+
+    <title>Hariharan | Full Stack Developer</title>
+
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+
+            --bg: #080a0f;
+
+            --card: #11141c;
+
+            --card2: #171b25;
+
+            --text: #f4f4f5;
+
+            --muted: #9ca3af;
+
+            --purple: #8b5cf6;
+
+            --purple-light: #a78bfa;
+
+            --border: rgba(255,255,255,0.09);
+
+            --max-width: 1150px;
+
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Inter", sans-serif;
+
+            background: var(--bg);
+
+            color: var(--text);
+
+            line-height: 1.7;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 70px;
+
+            z-index: 1000;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            background: rgba(8,10,15,0.85);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .logo {
+
+            font-size: 28px;
+
+            font-weight: 800;
+
+        }
+
+
+        .logo span {
+
+            color: var(--purple-light);
+
+        }
+
+
+        nav {
+
+            display: flex;
+
+            gap: 30px;
+
+        }
+
+
+        nav a {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            transition: 0.3s;
+
+        }
+
+
+        nav a:hover {
+
+            color: white;
+
+        }
+
+
+        .menu {
+
+            display: none;
+
+            font-size: 25px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================
+           COMMON
+        ========================== */
+
+        section {
+
+            max-width: var(--max-width);
+
+            margin: auto;
+
+            padding: 110px 25px;
+
+        }
+
+
+        .tag {
+
+            color: var(--purple-light);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .section-title {
+
+            font-size: 45px;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        #home {
+
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            align-items: center;
+
+            gap: 70px;
+
+            padding-top: 150px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: clamp(50px, 7vw, 85px);
+
+            line-height: 1;
+
+            letter-spacing: -5px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--purple-light);
+
+        }
+
+
+        .hero h2 {
+
+            margin-top: 20px;
+
+            font-size: 30px;
+
+            color: #d1d5db;
+
+        }
+
+
+        .hero p {
+
+            margin-top: 25px;
+
+            max-width: 650px;
+
+            color: var(--muted);
+
+            font-size: 17px;
+
+        }
+
+
+        .buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 30px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .btn {
+
+            padding: 13px 22px;
+
+            border-radius: 8px;
+
+            font-weight: 600;
+
+            border: 1px solid var(--border);
+
+            transition: 0.3s;
+
+        }
+
+
+        .btn-primary {
+
+            background: var(--purple);
+
+        }
+
+
+        .btn-primary:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .btn-secondary:hover {
+
+            background: var(--card2);
+
+        }
+
+
+        .socials {
+
+            display: flex;
+
+            gap: 25px;
+
+            margin-top: 25px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .socials a {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .socials a:hover {
+
+            color: var(--purple-light);
+
+        }
+
+
+        /* =========================
+           CODE CARD
+        ========================== */
+
+        .code-card {
+
+            background: #0d1017;
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+
+            animation: floating 5s infinite ease-in-out;
+
+        }
+
+
+        .window-bar {
+
+            padding: 15px;
+
+            border-bottom: 1px solid var(--border);
+
+            display: flex;
+
+            gap: 7px;
+
+        }
+
+
+        .window-bar span {
+
+            width: 10px;
+
+            height: 10px;
+
+            background: #444;
+
+            border-radius: 50%;
+
+        }
+
+
+        .code {
+
+            padding: 25px;
+
+            overflow-x: auto;
+
+            font-family: monospace;
+
+            font-size: 13px;
+
+            line-height: 2;
+
+        }
+
+
+        .purple {
+            color: #c084fc;
+        }
+
+
+        .green {
+            color: #86efac;
+        }
+
+
+        .blue {
+            color: #60a5fa;
+        }
+
+
+        @keyframes floating {
+
+            0%,100% {
+
+                transform: translateY(0);
+
+            }
+
+            50% {
+
+                transform: translateY(-12px);
+
+            }
+
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 60px;
+
+        }
+
+
+        .about-text p {
+
+            color: var(--muted);
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .info {
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 10px 25px;
+
+        }
+
+
+        .info-item {
+
+            padding: 18px 0;
+
+            border-bottom: 1px solid var(--border);
+
+        }
+
+
+        .info-item:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .info-item small {
+
+            display: block;
+
+            color: var(--muted);
+
+            margin-bottom: 3px;
+
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills {
+
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .skill {
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .skill:hover {
+
+            transform: translateY(-7px);
+
+            border-color: var(--purple);
+
+        }
+
+
+        .skill-icon {
+
+            width: 50px;
+
+            height: 50px;
+
+            display: grid;
+
+            place-items: center;
+
+            background: rgba(139,92,246,0.15);
+
+            color: var(--purple-light);
+
+            border-radius: 10px;
+
+            font-weight: 800;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .skill h3 {
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .skill p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+        }
+
+
+        .tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .tags span {
+
+            background: rgba(255,255,255,0.05);
+
+            border: 1px solid var(--border);
+
+            padding: 5px 10px;
+
+            border-radius: 6px;
+
+            font-size: 12px;
+
+            color: #d1d5db;
+
+        }
+
+
+        /* =========================
+           PROJECT
+        ========================== */
+
+        .project {
+
+            display: grid;
+
+            grid-template-columns: 100px 1fr;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+        }
+
+
+        .project-number {
+
+            display: flex;
+
+            justify-content: center;
+
+            padding-top: 30px;
+
+            font-size: 24px;
+
+            font-weight: 800;
+
+            color: var(--purple-light);
+
+            background: rgba(139,92,246,0.05);
+
+        }
+
+
+        .project-content {
+
+            padding: 35px;
+
+        }
+
+
+        .project-content small {
+
+            color: var(--purple-light);
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .project-content h3 {
+
+            font-size: 25px;
+
+            margin: 5px 0 10px;
+
+        }
+
+
+        .project-content p {
+
+            color: var(--muted);
+
+        }
+
+
+        .github-link {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            color: var(--purple-light);
+
+            font-weight: 600;
+
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education {
+
+            border-left: 1px solid var(--border);
+
+            padding-left: 30px;
+
+            position: relative;
+
+        }
+
+
+        .education::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -6px;
+
+            top: 5px;
+
+            width: 11px;
+
+            height: 11px;
+
+            border-radius: 50%;
+
+            background: var(--purple);
+
+        }
+
+
+        .education small {
+
+            color: var(--purple-light);
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .education h3 {
+
+            margin: 5px 0;
+
+            font-size: 22px;
+
+        }
+
+
+        .education p {
+
+            color: var(--muted);
+
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            padding: 40px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            align-items: center;
+
+        }
+
+
+        .contact h3 {
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .contact p {
+
+            color: var(--muted);
+
+            max-width: 600px;
+
+        }
+
+
+        .contact-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+        }
+
+
+        .contact-links a {
+
+            color: #d1d5db;
+
+            font-size: 14px;
+
+        }
+
+
+        .contact-links a:hover {
+
+            color: var(--purple-light);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            max-width: var(--max-width);
+
+            margin: auto;
+
+            border-top: 1px solid var(--border);
+
+            padding: 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+        }
+
+
+        footer a {
+
+            color: var(--purple-light);
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media(max-width:850px) {
+
+            #home {
+
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+
+            }
+
+
+            .about {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .skills {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .contact {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+        }
+
+
+        @media(max-width:650px) {
+
+            header {
+
+                padding: 0 20px;
+
+            }
+
+
+            .menu {
+
+                display: block;
+
+            }
+
+
+            nav {
+
+                display: none;
+
+                position: absolute;
+
+                top: 70px;
+
+                left: 0;
+
+                width: 100%;
+
+                padding: 15px 25px 25px;
+
+                background: #080a0f;
+
+                flex-direction: column;
+
+                gap: 0;
+
+                border-bottom: 1px solid var(--border);
+
+            }
+
+
+            nav.active {
+
+                display: flex;
+
+            }
+
+
+            nav a {
+
+                padding: 12px 0;
+
+            }
+
+
+            section {
+
+                padding: 85px 20px;
+
+            }
+
+
+            #home {
+
+                padding-top: 130px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 55px;
+
+                letter-spacing: -3px;
+
+            }
+
+
+            .hero h2 {
+
+                font-size: 25px;
+
+            }
+
+
+            .project {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .project-number {
+
+                justify-content: flex-start;
+
+                padding: 20px 30px 0;
+
+            }
+
+
+            footer {
+
+                flex-direction: column;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <a href="#home" class="logo">
+            H<span>.</span>
+        </a>
+
+
+        <div class="menu" id="menu">
+            ☰
+        </div>
+
+
+        <nav id="nav">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#education">
+                Education
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section id="home" class="hero">
+
+
+        <div>
+
+            <div class="tag">
+                B.Tech IT Undergraduate
+            </div>
+
+
+            <h1>
+                Hi, I'm
+                <span>Hariharan</span>.
+            </h1>
+
+
+            <h2>
+                Full Stack Developer
+            </h2>
+
+
+            <p>
+                I'm an Information Technology undergraduate who
+                enjoys learning programming, building useful
+                projects, and growing toward full-stack development.
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#projects"
+                   class="btn btn-primary">
+
+                    View My Work
+
+                </a>
+
+
+                <a href="#contact"
+                   class="btn btn-secondary">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+
+            <div class="socials">
+
+                <a href="https://github.com/nhariharan3377-droid"
+                   target="_blank">
+
+                    GitHub ↗
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/n-hariharan-7391a23b1/"
+                   target="_blank">
+
+                    LinkedIn ↗
+
+                </a>
+
+
+                <a href="mailto:nhariharan3377@gmail.com">
+
+                    Email ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CODE WINDOW -->
+
+        <div class="code-card">
+
+            <div class="window-bar">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <div class="code">
+
+<pre><span class="purple">const</span> developer = {
+
+  name:
+    <span class="green">"Hariharan"</span>,
+
+  role:
+    <span class="green">"Full Stack Developer"</span>,
+
+  education:
+    <span class="green">"B.Tech IT"</span>,
+
+  languages: [
+
+    <span class="green">"C"</span>,
+    <span class="green">"C++"</span>,
+    <span class="green">"Java"</span>,
+    <span class="green">"Python"</span>
+
+  ],
+
+  goal:
+    <span class="green">"Build & Learn"</span>
+
+};</pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+
+        <div class="tag">
+            01 / About
+        </div>
+
+
+        <h2 class="section-title">
+            A little about me
+        </h2>
+
+
+        <div class="about">
+
+
+            <div class="about-text">
+
+                <p>
+                    I'm <strong>Hariharan</strong>, a B.Tech
+                    Information Technology undergraduate with
+                    an interest in software development and
+                    full-stack technologies.
+                </p>
+
+
+                <p>
+                    I have experience learning programming
+                    languages such as C, C++, Java, and Python.
+                </p>
+
+
+                <p>
+                    I'm focused on strengthening my development
+                    skills through hands-on projects and
+                    practical problem solving.
+                </p>
+
+
+                <p>
+                    My goal is to grow into a capable full-stack
+                    developer and create applications that are
+                    simple, useful, and user-friendly.
+                </p>
+
+            </div>
+
+
+
+            <div class="info">
+
+
+                <div class="info-item">
+
+                    <small>
+                        Education
+                    </small>
+
+                    <strong>
+                        B.Tech Information Technology
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <small>
+                        Focus
+                    </small>
+
+                    <strong>
+                        Full Stack Development
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <small>
+                        Programming
+                    </small>
+
+                    <strong>
+                        C • C++ • Java • Python
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <small>
+                        Goal
+                    </small>
+
+                    <strong>
+                        Learn & Build
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+
+        <div class="tag">
+            02 / Skills
+        </div>
+
+
+        <h2 class="section-title">
+            What I work with
+        </h2>
+
+
+        <div class="skills">
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    &lt;/&gt;
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+                    Core programming and problem-solving.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Java</span>
+                    <span>Python</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    WEB
+                </div>
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Building responsive web experiences
+                    and learning full-stack development.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="skill">
+
+                <div class="skill-icon">
+                    AI
+                </div>
+
+                <h3>
+                    Project Building
+                </h3>
+
+                <p>
+                    Exploring practical ideas and creating
+                    beginner-friendly software projects.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>Chatbots</span>
+                    <span>Problem Solving</span>
+                    <span>Learning</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects">
+
+
+        <div class="tag">
+            03 / Projects
+        </div>
+
+
+        <h2 class="section-title">
+            Things I've built
+        </h2>
+
+
+        <div class="project">
+
+
+            <div class="project-number">
+                01
+            </div>
+
+
+            <div class="project-content">
+
+                <small>
+                    Featured Project
+                </small>
+
+
+                <h3>
+                    Beginner Entrepreneur Chatbot
+                </h3>
+
+
+                <p>
+                    A chatbot concept designed to help
+                    beginner entrepreneurs explore ideas,
+                    ask questions, and get guidance while
+                    starting their entrepreneurial journey.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>Chatbot</span>
+                    <span>Python</span>
+                    <span>Entrepreneurship</span>
+
+                </div>
+
+
+                <a class="github-link"
+                   href="https://github.com/nhariharan3377-droid"
+                   target="_blank">
+
+                    View on GitHub ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+
+        <div class="tag">
+            04 / Education
+        </div>
+
+
+        <h2 class="section-title">
+            My education
+        </h2>
+
+
+        <div class="education">
+
+            <small>
+                Currently Pursuing
+            </small>
+
+
+            <h3>
+                B.Tech — Information Technology
+            </h3>
+
+
+            <p>
+                Undergraduate student focused on programming,
+                software development, and building practical
+                technical skills.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+
+        <div class="tag">
+            05 / Contact
+        </div>
+
+
+        <h2 class="section-title">
+            Let's connect
+        </h2>
+
+
+        <div class="contact">
+
+
+            <div>
+
+                <h3>
+                    Have an opportunity or project idea?
+                </h3>
+
+
+                <p>
+                    Feel free to reach out. I'm always
+                    interested in learning, building,
+                    and connecting with other developers.
+                </p>
+
+            </div>
+
+
+            <div class="contact-links">
+
+
+                <a href="mailto:nhariharan3377@gmail.com">
+
+                    ✉ nhariharan3377@gmail.com
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/n-hariharan-7391a23b1/"
+                   target="_blank">
+
+                    in LinkedIn
+
+                </a>
+
+
+                <a href="https://github.com/nhariharan3377-droid"
+                   target="_blank">
+
+                    ⌘ GitHub
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © <span id="year"></span>
+            Hariharan.
+            Built with HTML, CSS & JavaScript.
+        </p>
+
+
+        <a href="#home">
+            Back to top ↑
+        </a>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* Mobile menu */
+
+        const menu =
+            document.getElementById("menu");
+
+        const nav =
+            document.getElementById("nav");
+
+
+        menu.addEventListener("click", function () {
+
+            nav.classList.toggle("active");
+
+        });
+
+
+        /* Close mobile menu */
+
+        document
+            .querySelectorAll("#nav a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    nav.classList.remove("active");
+
+                });
+
+            });
+
+
+        /* Current year */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+
+</html>
